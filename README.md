@@ -12,16 +12,21 @@ The prerequisites to run these scripts are:
 I leased my Kia EV9 in the fall of 2024. As a Home Assistant nerd, I have enjoyed the data that the Kia APIs provide about my driving and charging habits.
 
 ## Lease Mileage Remaining
+
+[HOW-TO Lease Mileage Remaining](lease-mileage-remaining.md)
+
 If you are a lessee like me, you may have concerns that you are going over your mileage limits. This is the quickest way to incur a huge overage bill from Kia.
 
 This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your proscribed mileage given your lease term. You customize the  values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
 
 ![Odometer Graph](static/usable_lease_mileage.png)
 
+[HOW-TO Lease Mileage Remaining](lease-mileage-remaining.md)
+
 ## Charger Statistics
 I use an [Emporia](https://www.amazon.com/dp/B0CKKPTDPK/ref=dp_iou_view_item?ie=UTF8&th=1}) charger that provides a sensor "sensor.evcharger_energy_this_month" that can be used to calculate how much money you have spent on electricity.
 
-To get an accurate price / per kilowatt hour, instead of using the utility company's stated price per kWh, I instead prefer to include all the taxes, riders, and fees they use. To do that, divide (total_bill_amount) / (net_supplied_energy - net_supplied_customer_to_grid) since I have solar panels as well. Our utility quotes $0.13/kWh on the rate schedule, but actual price is $0.159/kWh with fees and riders included. 
+To get an accurate price / per kilowatt hour, instead of using the utility company's stated price per kWh, I prefer to include all the taxes, riders, and fees they lump into your bill. To do that, divide (total_bill_amount) / (net_supplied_energy - net_supplied_customer_to_grid) since I have solar panels as well. Our utility quotes $0.13/kWh on the rate schedule, but actual price is $0.159/kWh with fees and riders included. 
 
 ![Charger Statistics](static/charger_stats.png)
 
