@@ -6,7 +6,7 @@ If you are a lessee like me, you may have concerns that you are going over your 
 
 This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your proscribed mileage given your lease term. You customize the  values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
 
-![Odometer Graph](static/usable_lease_mileage.png)
+<img src="static/usable_lease_mileage.png" alt="Odometer Graph" height="60%" width="60%">
 
 ## Setup
 
@@ -20,7 +20,7 @@ This template helper and graph help understand, with real-time data, whether you
 1. Paste and *customize* these values:
 
 ```
-{% set odometer = states('sensor.my_ev9_odometer') | float %}
+        {% set odometer = states('sensor.my_ev9_odometer') | float %}
         {% set lease_start = "2024-10-01 01:00:00.123456+00:00" | as_datetime %}
         {% set lease_end = "2027-10-01 01:00:00.123456+00:00" | as_datetime %}
         {% set annual_mileage_allowance = 10000 | int %}
@@ -40,8 +40,7 @@ lease_start , lease_end , annual_mileage_allowance , lease_years
 13. At this point, Preview should display a numeric value for you to use. It is not accurate yet.
 14. Submit the helper.
 
-![Finished Template Helper](static/remaining_mileage_sensor_finished.png)
-
+<img src="static/remaining_mileage_sensor_finished.png" alt="Finished Template Helper" height="50%" width="50%">
 
 ## Create the gauge
 This adds the UI component.
@@ -65,6 +64,7 @@ max: 1000
 min: -1000
 ```
 and save it.
-![Gauge Editor](static/gauge_editor.png)
+
+<img src="static/gauge_editor.png" alt="Gauge Editor" height="50%" width="50%">
 
 6. You can customize the Green/Yellow/Red thresholds to match your driving habits. These are set for someone who averages 50 miles / week with occasional road trips.
