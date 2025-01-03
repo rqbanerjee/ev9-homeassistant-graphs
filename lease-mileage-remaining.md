@@ -28,7 +28,7 @@ This template helper and graph help understand, with real-time data, whether you
         {% set days_in_lease = (lease_end - lease_start).days %}
         {% set days_elapsed = (now() - lease_start).days %}
         {% set allowed_miles_today = (days_elapsed / days_in_lease) * (lease_years * annual_mileage_allowance ) %}
-        {{ (odometer - allowed_miles_today)  }}
+        {{ (allowed_miles_today - odometer)  }}
 ```
 
 8. Ensure you have added your data in the following fields:
