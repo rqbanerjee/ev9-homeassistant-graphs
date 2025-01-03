@@ -4,7 +4,7 @@ Make sure you have satisfied the [Prerequisites](README.md#prerequisites).
 
 If you are a lessee like me, you may have concerns that you are going over your mileage limits. This is the quickest way to incur a huge overage bill from Kia.
 
-This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your proscribed mileage given your lease term. You customize the  values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
+This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your allotted mileage given your lease term. You customize the  values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
 
 <img src="static/usable_lease_mileage.png" alt="Odometer Graph" height="60%" width="60%">
 
