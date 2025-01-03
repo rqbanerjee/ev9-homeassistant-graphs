@@ -1,0 +1,3 @@
+{% set energy_this_month = states('sensor.evcharger_energy_this_month') | float %}
+  
+        {{ ((energy_this_month) * 0.1544904) | round(2, default=2) }}
