@@ -1,9 +1,10 @@
         {% set odometer = states('sensor.my_ev9_odometer') | float %}
         {% set lease_start = "2024-10-01 01:00:00.123456+00:00" | as_datetime %}
         {% set lease_end = "2027-10-01 01:00:00.123456+00:00" | as_datetime %}
+        {% set initial_odometer_reading = 13 | int %}
         {% set annual_mileage_allowance = 10000 | int %}
         {% set lease_years = 3 | int %}
-        {% set days_in_lease = (lease_end - lease_start).days %}
-        {% set days_elapsed = (now() - lease_start).days %}
+        {% set days_in_lease = (lease_end - lease_start) %}
+        {% set days_elapsed = (now() - lease_start) %}
         {% set allowed_miles_today = (days_elapsed / days_in_lease) * (lease_years * annual_mileage_allowance ) %}
-        {{ (allowed_miles_today - odometer)  }}
+        {{ (allowed_miles_today - (odometer - initial_odometer_reading)) | round(0) }}

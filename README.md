@@ -17,7 +17,7 @@ I leased my Kia EV9 in the fall of 2024. As a Home Assistant nerd, I have enjoye
 
 If you are a lessee like me, you may have concerns that you are going over your mileage limits. This is the quickest way to incur a huge overage bill from Kia.
 
-This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your allotted mileage given your lease term. You customize the  values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
+This template helper and graph help understand, with real-time data, whether you are over, under, or just about at your allotted mileage given your lease term. You customize the values when you upload the template. Then, I will show you how to create a gauge to display it on your dashboard.
 
 ![Odometer Graph](static/usable_lease_mileage.png)
 
